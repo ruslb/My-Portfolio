@@ -11,5 +11,6 @@ const Project = ({title, img}) => {
   </li>
 	 ); 
 }
+
  
 export default Project;
