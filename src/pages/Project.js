@@ -1,5 +1,6 @@
+import BtnGitHub from "../components/btnGitHub/BtnGitHub";
 import img from "./../img/projects/02-big.jpg"
-import gitHubIcon from './../img/icons/gitHub-black.svg';
+
 
 const Project = () => {
 	return (
@@ -9,13 +10,12 @@ const Project = () => {
 	<hi className="title-1">Video service </hi>
     <img src={img} alt="" className="project-details__cover" />
 	 <div className="project-details__desc" >
-<p> Skills: React,Node.js, MongoDB</p>
-	 </div>
-	 <a href="#!" className="btn-outline" >
-		<img src={gitHubIcon} alt=""/>
+     <p> Skills: React,Node.js, MongoDB</p>
+	   </div>
+	
 
-	  </a>
-	</div>
+       <BtnGitHub link="http://github.com" />
+	  </div>
 	</div>
 </main>
 	  );
