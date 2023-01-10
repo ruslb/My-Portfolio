@@ -1,24 +1,32 @@
 import "./styles/main.css"
-import sun from "./img/icons/sun.svg"
-import moon from "./img/icons/moon.svg"
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import Navbar from "./components/navbar/Navbar"
-import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
 import Home from "./pages/Home"
 import Projects from "./pages/Projects"
 import Contacts from "./pages/Contacts"
 import Project from "./pages/Project"
+import SkrollToTop from "./utils/skrollToTop"
 
 function App() {
   return (
     <div className="App">
+		<Router>
+			<SkrollToTop />
     <Navbar />
-	 <Home />
-	 <Projects />
-	 <Project />
-	 <Contacts />
+	 <Routes>
+		<Route path="/" element={ <Home />} />
+		<Route path="/projects" element={ <Projects />} />
+		<Route path="/project" element={ <Project />} />
+		<Route path="/contacts" element={ <Contacts />} />
+
+	 </Routes>
+	 
+	
     <Footer />
+
+	 </Router>
     </div>
   );
 }
