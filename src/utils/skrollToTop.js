@@ -5,8 +5,8 @@ export default function SkrollToTop() {
 	const { pathname } = useLocation();
 
 	useEffect(() => {
-		window.skrollTo(0, 0);
-}, [pathname]);
+		window.scrollTo(0, 0);
+	 }, [pathname]);
 
 return null;
 }
