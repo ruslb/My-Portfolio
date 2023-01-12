@@ -7,18 +7,18 @@ import Home from "./pages/Home"
 import Projects from "./pages/Projects"
 import Contacts from "./pages/Contacts"
 import Project from "./pages/Project"
-import SkrollToTop from "./utils/skrollToTop"
+import SkrollToTop from "./utils/SkrollToTop"
 
 function App() {
   return (
     <div className="App">
 		<Router>
-			<SkrollToTop />
+		<SkrollToTop />
     <Navbar />
 	 <Routes>
 		<Route path="/" element={ <Home />} />
 		<Route path="/projects" element={ <Projects />} />
-		<Route path="/project" element={ <Project />} />
+		<Route path="/project/:id" element={ <Project />} />
 		<Route path="/contacts" element={ <Contacts />} />
 
 	 </Routes>
